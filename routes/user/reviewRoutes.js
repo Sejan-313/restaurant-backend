@@ -1,12 +1,11 @@
 import express from 'express';
 import {
   getAllReviews,
-  toggleApproval,   // ✅ this already exists
+  toggleApproval,
   deleteReview,
   getApprovedReviews,
   createReview,
-  // REMOVE toggleReviewApproval
-} from '/Freeliencing_work/Restaurent/Backend/controllers/user/reviewController.js';
+} from '../../controllers/user/reviewController.js';
 
 
 const router = express.Router(); // ✅ Declare first

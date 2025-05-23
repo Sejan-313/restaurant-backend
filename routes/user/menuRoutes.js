@@ -6,7 +6,7 @@ const {
   createMenuItem,
   updateMenuItem,
   deleteMenuItem
-} = require('/Freeliencing_work/Restaurent/Backend/controllers/user/menuController.js');
+} = require('../../controllers/user/menuController.js');
 
 // Routes
 router.get('/', getAllMenus);
