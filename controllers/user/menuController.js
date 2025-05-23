@@ -4,7 +4,7 @@
 
 import multer from 'multer';
 import streamifier from 'streamifier';
-import { Menu } from '../../models/user/Menu.js';
+import Menu from '../../models/user/Menu.js';
 
 import { v2 as cloudinary } from 'cloudinary';
 
