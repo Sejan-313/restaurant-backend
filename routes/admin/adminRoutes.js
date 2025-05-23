@@ -1,6 +1,6 @@
 import express from 'express';
-import { loginAdmin, getDashboard } from '/Freeliencing_work/Restaurent/Backend/controllers/admin/Admin.js';
-import { protect } from '/Freeliencing_work/Restaurent/Backend/middlewares/authMiddleware.js';
+import { loginAdmin, getDashboard } from '../../controllers/admin/Admin.js';
+import { protect } from '../../middlewares/authMiddleware.js';
 
 const router = express.Router();
 
