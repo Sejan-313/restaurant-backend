@@ -1,22 +1,21 @@
 import express from 'express';
 import {
-  getAllReviews,
-  toggleApproval,
-  deleteReview,
   getApprovedReviews,
   createReview,
+  getAllReviews,
+  toggleApproval,
+  deleteReview
 } from '../../controllers/user/reviewController.js';
 
+const router = express.Router();
 
-const router = express.Router(); // ✅ Declare first
+// Public
+router.get('/', getApprovedReviews);
+router.post('/', createReview);
 
-// Public routes
-router.get('/', getApprovedReviews);      // GET /api/reviews
-router.post('/', createReview);           // POST /api/reviews
-
-// Admin routes
-router.get('/admin/all', getAllReviews);                 // GET all (admin)
+// Admin
+router.get('/admin/all', getAllReviews);
 router.put('/admin/toggle/:id', toggleApproval);
-router.delete('/:id', deleteReview);                     // Delete review
+router.delete('/:id', deleteReview);
 
-export default router; // ✅ Use this instead of module.exports in ES Modules
+export default router;  // default export so `import reviewRoutes from ...` works
