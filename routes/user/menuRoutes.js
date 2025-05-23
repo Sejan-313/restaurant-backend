@@ -1,17 +1,17 @@
-const express = require('express');
-const router = express.Router();
-
-const {
+import express from 'express';
+import {
   getAllMenus,
   createMenuItem,
   updateMenuItem,
   deleteMenuItem
-} = require('../../controllers/user/menuController.js');
+} from '../../controllers/user/menuController.js';
 
-// Routes
+const router = express.Router();
+
 router.get('/', getAllMenus);
 router.post('/', createMenuItem);
 router.put('/:id', updateMenuItem);
 router.delete('/:id', deleteMenuItem);
 
-module.exports = router;
+// <-- Add this:
+export default router;
