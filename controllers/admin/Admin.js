@@ -1,4 +1,5 @@
-import Admin from '../../models/admin/Admin.js';
+import { Admin } from '../../models/admin/Admin.js';
+
 import jwt from 'jsonwebtoken';
 
 // POST /api/admin/login

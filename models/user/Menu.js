@@ -8,4 +8,5 @@ const menuSchema = new mongoose.Schema({
   image: String, // URL string
 }, { timestamps: true });
 
-module.exports = mongoose.model('Menu', menuSchema);
+export const Review = mongoose.model('Menu', menuSchema);
+
