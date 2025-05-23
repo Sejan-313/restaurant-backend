@@ -1,12 +1,12 @@
-// models/Menu.js
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const menuSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: String,
   price: { type: Number, required: true },
-  image: String, // URL string
+  image: String,
 }, { timestamps: true });
 
-export const Review = mongoose.model('Menu', menuSchema);
+const Menu = mongoose.model('Menu', menuSchema);
 
+export default Menu; // ✅ Default export so you can import it as `Menu`
